@@ -32,7 +32,7 @@ git clone https://github.com/Global-Mapping-Hub/gp-map-template.git
 After downloading or cloning the repository, navigate to the project directory using the following command
 
 ```console
-cd \<path-to-project-directory>
+cd <path-to-project-directory>
 ```
 
 **3. Install dependencies:**
