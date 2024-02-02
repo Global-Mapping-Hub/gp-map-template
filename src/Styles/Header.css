@@ -1,0 +1,48 @@
+.header-wrapper {
+	height: var(--header-height);
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px 40px;
+	gap: 20px;
+}
+
+.header-flex-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.header-spacer {
+	margin-left: auto;
+}
+
+.header-logo {
+	width: 80px;
+	height: 40px;
+	background: url('../Images/main_logo.png') no-repeat center;
+	background-size: 80px;
+}
+
+.header-map-title {
+	font-family: 'Greenpeace Sans Bold';
+	font-size: 24px;
+	color: #646464;
+	margin-left: 34px;
+	display: flex;
+	align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+	.header-wrapper {
+		padding: 0px 20px;
+	}
+	.header-flex-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.header-map-title {
+		margin-left: 0px;
+		font-size: 18px;
+	}
+}

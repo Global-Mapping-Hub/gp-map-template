@@ -1,0 +1,117 @@
+.sidebar-wrapper {
+	display: flex;
+	position: absolute;
+	right: 0;
+	top: var(--header-height);
+	height: calc(100% - var(--header-height));
+	width: var(--sidebar-width);
+	align-items: center;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 3;
+}
+
+/* .sidebar-wrapper.show {
+	transform: translate(0, 0);
+	opacity: 1;
+	visibility: visible;
+} */
+
+.sidebar {
+	height: 100%;
+	width: 100%;
+	pointer-events: all;
+	background: #FFFFFF;
+	padding: 40px 10px 10px 40px;
+	transform: translate(100%, 0);
+	overflow: hidden;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .7s ease !important;
+}
+
+.sidebar.show {
+	transform: translate(0, 0);
+	opacity: 1;
+	visibility: visible;
+}
+
+.sidebar-header {
+	display: flex;
+	flex-direction: row;
+	/* justify-content: space-between; */
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.sidebar-title {
+	font-weight: 700;
+	font-size: 20px;
+	/* margin-bottom: 15px; */
+}
+
+.sidebar .content-wrapper {
+	height: 100%;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+/* .sidebar .content {
+	margin-right: 30px;
+} */
+
+.sidebar .button-close {
+	z-index: 2;
+}
+
+.simplebar-content {
+	margin-bottom: 40px;
+}
+
+.sidebar-urls {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	margin-top: 15px;
+}
+
+.gp-button-url {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: max-content;
+	padding: 10px 40px;
+	background: var(--buttons-url-bg-color);
+	border-radius: var(--buttons-url-radius);
+	font-size: 16px;
+	border: 0;
+	z-index: 1;
+	font-family: 'Work Sans';
+	color: var(--buttons-url-text-color);
+	text-decoration: none;
+}
+.gp-button-url:hover {
+	color: var(--buttons-url-text-color);
+	background: var(--buttons-url-bg-hover-color);
+}
+
+
+@media only screen and (max-width: 1000px) {
+	.sidebar-wrapper {
+		width: 100%;
+		align-items: flex-end;
+		transform: translate(0, 100%);
+	}
+
+	.sidebar-wrapper.show {
+		transform: translate(0, 0);
+	}
+
+	.sidebar {
+		max-height: calc(95vh - var(--header-height));
+		box-shadow: var(--sidebar-mobile-shadow);
+		border-radius: 10px 10px 0px 0px !important;
+	}
+}

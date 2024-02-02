@@ -1,0 +1,81 @@
+.controls-left {
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: calc(100% - var(--header-height) - var(--controls-padding));
+	top: var(--header-height);
+	left: 0px;
+	margin: var(--controls-padding);
+	width: calc(100% - var(--controls-padding));
+}
+
+.controls-right {
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	height: calc(100% - var(--header-height));
+	top: var(--header-height);
+	right: 0px;
+	margin-right: var(--controls-padding);
+	width: calc(100% - var(--controls-padding));
+
+}
+
+.zoom-wrapper {
+	border-radius: var(--buttons-border-radius);
+	box-shadow: var(--buttons-shadow);
+	z-index: 1;
+}
+
+.zoom-wrapper button+button {
+	border-top: 1px solid #ddd;
+}
+
+.gp-button {
+	cursor: pointer;
+	display: flex;
+	/* position: absolute; */
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 15px 18px;
+	width: 56px;
+	height: 56px;
+	background: #FFFFFF;
+	border-radius: var(--buttons-border-radius);
+	box-shadow: var(--buttons-shadow);
+	/* filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.14)); */
+	border: 0;
+	z-index: 1;
+}
+
+.gp-button::before {
+	content: ' ';
+	position: absolute;
+	display: block;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.gp-button.zoom-in {
+	box-shadow: none;
+	border-radius: var(--buttons-border-radius) var(--buttons-border-radius) 0 0;
+}
+
+.gp-button.zoom-out {
+	box-shadow: none;
+	border-radius: 0 0 var(--buttons-border-radius) var(--buttons-border-radius);
+}
+
+.gp-button.info {
+	margin-bottom: 20px;
+}
+
+.gp-button.zoom-in::before { width: 20px; height: 20px; background-image: url('../Images/plus.svg'); }
+.gp-button.zoom-out::before { width: 20px; height: 20px; background-image: url('../Images/minus.svg'); }
+.gp-button.info::before { width: 26px; height: 26px; background-image: url('../Images/info.svg'); }
+.gp-button.filter::before { width: 24px; height: 24px; background-image: url('../Images/filter.svg'); }

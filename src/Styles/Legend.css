@@ -1,0 +1,77 @@
+.legend-window-wrapper {
+	display: flex;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.legend-window {
+	position: absolute;
+	width: max-content;
+	height: 56px;
+	filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.19));
+	background: #FFFFFF;
+	border-radius: 55px;
+	right:0px;
+	margin: 0px var(--legend-padding);
+	bottom: var(--legend-padding);
+	pointer-events: all;
+}
+
+.legend-window .content {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	gap: 20px;
+	padding: 20px 30px;
+}
+
+.legend-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 7px;
+}
+
+.legend-icon {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	flex-shrink: 0;
+}
+
+.legend-label {
+	font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+	.legend-window {
+		margin: 0px;
+		right: auto;
+		left: 50%;
+		bottom: 40px;
+		transform: translateX(-50%);
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.legend-window .content {
+		gap: 10px;
+		padding: 5px 15px;
+	}
+	.legend-wrapper {
+		gap: 5px;
+	}
+	.legend-label {
+		font-size: 12px;
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"name": "gp-map-template",
+	"version": "0.1.0",
+	"private": true,
+	"homepage": ".",
+	"dependencies": {
+		"@turf/turf": "^6.5.0",
+		"keen-slider": "^6.8.5",
+		"mapbox-gl": "^2.13.0",
+		"papaparse": "^5.4.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.10.0",
+		"react-scripts": "^5.0.1",
+		"vanilla-cookieconsent": "^2.9.0",
+		"web-vitals": "^2.1.4"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "CI=false GENERATE_SOURCEMAP=false react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}

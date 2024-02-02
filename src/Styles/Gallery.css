@@ -1,0 +1,159 @@
+[class^="image-slide"],
+[class*="image-slide"] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0;
+	color: #ededed;
+	height: 300px;
+	/* max-height: 100vh; */
+	background: #ededed;
+	min-height: auto;
+}
+
+.image-slide img {
+	cursor: pointer;
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	border-radius: 7px;
+}
+
+.image-slide img[src=""] {
+	display: none;
+}
+
+.gallery {
+	margin-bottom: 10px;
+	margin-top: 15px;
+}
+
+.navigation-wrapper {
+	position: relative;
+}
+
+.dots {
+	display: flex;
+	padding: 10px 0;
+	justify-content: center;
+}
+
+.dot {
+	border: none;
+	width: 10px;
+	height: 10px;
+	background: #c5c5c5;
+	border-radius: 50%;
+	margin: 0 5px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.dot:focus {
+	outline: none;
+}
+
+.dot.active {
+	background: #000;
+}
+
+.arrow {
+	width: 36px;
+	height: 36px;
+	padding: 7px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	fill: #fff;
+	cursor: pointer;
+	stroke-width: 1;
+	filter: drop-shadow(0px 0px 1px rgb(0 0 0 / 0.4));
+}
+
+.arrow--disabled {
+	filter: none;
+}
+
+.arrow--left {
+	left: 5px;
+}
+
+.arrow--right {
+	left: auto;
+	right: 5px;
+}
+
+.arrow--disabled {
+	fill: rgba(255, 255, 255, 0.5);
+}
+
+.image-title {
+	position: absolute;
+	bottom: 0px;
+	margin-left: 10px;
+	padding: 5px;
+	pointer-events: none;
+	font-size: 11px;
+	width: 100%;
+}
+
+.gallery-popup-wrapper {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	backdrop-filter: blur(5px);
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	overflow: hidden;
+	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 4;
+	transition: visibility .5s linear, opacity .5s ease !important;
+}
+
+.gallery-popup-wrapper.show {
+	opacity: 1;
+	visibility: visible;
+}
+
+.gallery-popup {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* box-sizing: border-box; */
+	/* width: 70%; */
+	max-height: 75%;
+	max-width: 85%;
+	min-height: fit-content;
+	pointer-events: all;
+	transform: translateY(100%);
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility .5s linear, opacity .5s ease, transform .5s ease !important;
+}
+
+.gallery-popup.show {
+	transform: translateY(0);
+	opacity: 1;
+	visibility: visible;
+}
+
+.gallery-popup .button-close {
+	position: absolute;
+	right: -30px;
+	top: -30px;
+}
+
+.gallery-popup img {
+	height: 100%;
+	width: 100%;
+}

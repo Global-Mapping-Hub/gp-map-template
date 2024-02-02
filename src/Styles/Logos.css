@@ -1,0 +1,33 @@
+.logos-wrapper {
+	display: flex;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: fit-content;
+	width: fit-content;
+	/* height: calc(100% - var(--header-height)); */
+	width: 100%;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.logo-greenpeace-link {
+	background: var(--logo-greenpeace-bg-color);
+	pointer-events: all;
+	margin-left: 40px;
+	margin-bottom: 40px;
+}
+
+.logo-greenpeace-link .logo {
+	width: 160px;
+	height: 40px;
+	background: url('../Images/gp_logo.svg') no-repeat center;
+	background-size: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+	.logos-wrapper {
+		display: none;
+	}
+}

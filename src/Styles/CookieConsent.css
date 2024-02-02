@@ -1,0 +1,99 @@
+:root {
+	--cc-font-family: 'Work Sans';
+	--cc-overlay-bg: #ffffff;
+	--cc-overlay-opacity: 0.7;
+	--cc-btn-primary-bg: #2E2E2E;
+	--bs-body-color: #2E2E2E;
+	--cc-text: #2E2E2E;
+
+	--cc-btn-border-radius: var(--buttons-concent-radius);
+	--cc-btn-primary-text: var(--buttons-concent-agree-text-color);
+	--cc-btn-primary-bg: var(--buttons-concent-agree-bg-color);
+	--cc-btn-primary-hover-text: var(--buttons-concent-agree-text-hover-color);
+	--cc-btn-primary-hover-bg: var(--buttons-concent-agree-bg-hover-color);
+
+	--cc-btn-secondary-text: var(--buttons-concent-decline-text-color);
+	--cc-btn-secondary-bg: var(--buttons-concent-decline-bg-color);
+	--cc-btn-secondary-hover-text: var(--buttons-concent-decline-text-hover-color);
+	--cc-btn-secondary-hover-bg: var(--buttons-concent-decline-bg-hover-color);
+}
+
+#c-txt, #s-cnt .p {
+	font-size: 1em;
+}
+
+#cm {
+	padding: 40px;
+	border: 1px solid #DDDDDD;
+	border-radius: 20px;
+	max-width: 30em;
+}
+
+#s-inr {
+	padding: 20px 40px 40px 40px;
+	border: 1px solid #DDDDDD;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+#s-hdr, #s-bl, #s-bns {
+	position: relative;
+	padding: 0px;
+}
+
+#s-bns {
+	border-top: none;
+	margin-top: 20px;
+}
+
+#s-bl {
+	height: 100%;
+}
+
+#c-ttl { text-align: center; }
+#c-ttl, #s-ttl {
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.cc_div *, .cc_div :after, .cc_div :before, .cc_div :hover {
+	line-height: 22px;
+}
+
+.cc-link {
+	color: #2E2E2E !important;
+	border-bottom: none !important;
+	text-decoration: underline !important;
+}
+.cc-link:hover {
+	text-decoration: none !important;
+}
+
+#c-p-bn,
+#c-s-bn,
+#s-all-bn,
+#s-sv-bn {
+	font-size: 16px !important;
+	padding: 15px 30px !important;
+}
+
+#s-c-bn, #s-c-bn:hover {
+	position: relative;
+	background-image: url(../Images/close_thin.svg);
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-size: 24px;
+	background-color: transparent;
+	background-position: center;
+	width: 24px;
+	height: 24px;
+}
+
+#s-c-bn:after, #s-c-bn:before {
+	display: none;
+}
+
+.link-wrapper, .link-wrapper:hover {
+	text-align: center;
+}

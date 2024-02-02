@@ -1,0 +1,69 @@
+.map-wrapper {
+	position: absolute;
+	height: calc(100% - var(--header-height));
+	width: 100%;
+	top: var(--header-height);
+	left: 0px;
+}
+
+.map-container {
+	height: 100%;
+	width: 100%;
+}
+
+.mapboxgl-marker {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	-webkit-filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
+	filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 42px;
+	height: 42px;
+}
+.mapboxgl-marker.location {
+	border: 0;
+}
+
+/* .mapboxgl-marker.location::before {
+	content: attr(data-content);
+	position: absolute;
+	display: flex;
+	align-self: center;
+	left: 44px;
+	top: -2px;
+	min-width: 146px;
+	line-height: 15px;
+	font-size: 12px;
+	padding: 10px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0,0,0,.15);
+	color: #000;
+} */
+
+.mapboxgl-marker .marker-location {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	background-color: #ff3939;
+	border-radius: 50% 50% 0px 50%;
+	transform: rotate(45deg);
+	border: 0;
+	/* bottom: 16px; */
+}
+.marker-inner-icon {
+	position: relative;
+	height: 40%;
+	width: 40%;
+	background-color: #ffffff;
+	border-radius: 50%;
+}

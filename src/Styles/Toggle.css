@@ -1,0 +1,39 @@
+.filter-toggle {
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	margin-left: auto;
+}
+
+.filter-toggle input {
+	cursor: pointer;
+	width: 48px;
+	height: 24px;
+	background-color: #F3F4F4;
+	background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27%23C0C2D1%27/%3e%3c/svg%3e");
+	background-position: 0;
+	border-radius: 2em;
+	transition: background-position .15s ease-in-out;
+	appearance: none;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.filter-toggle input:checked {
+	border: 0;
+	background-position: 100%;
+	background-color: var(--filter-toggle-switch-color);
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23FFF'/%3E%3C/svg%3E");
+	filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.11));
+}
+
+.filter-toggle input:focus {
+	border: 0;
+	outline: 0;
+	box-shadow: none;
+}
+
+.filter-toggle input:focus-visible {
+	/* outline: 2px solid black; */
+	box-shadow: var(--filter-toggle-switch-focus);
+}
