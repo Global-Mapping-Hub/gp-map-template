@@ -18,7 +18,7 @@ This map template is based on **React.js** - a widely used JavaScript library fo
 
 ## **1. Download or clone the repository:**
 
-Simply download the following archive and place it in any directory on your system.
+Simply download the [following archive](https://github.com/Global-Mapping-Hub/gp-map-template/archive/refs/heads/main.zip) and place it in any directory on your system.
 
 Or, if you have git installed, then you can clone the repository to your computer using the following command:
 
